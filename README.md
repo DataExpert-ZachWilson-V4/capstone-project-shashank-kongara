@@ -45,34 +45,25 @@ The prepared data will be used for the following purposes:
 - **Relational Database:**
   - To enable complex queries and relationship-based analysis between different entities (players, clubs, matches)
 - **Dashboard:**
-  - To visualize key performance indicators (KPIs) for players and teams, using tools like Tableau or Power BI
+  - To visualize key performance indicators (KPIs) for players and teams, using tools like AWS QuickSight
 
 ## 4. Tech Stack and Tool Choices
 
 **Tech Stack:**
 - **Data Ingestion:**
-  - **Apache Kafka:** For real-time data streaming from APIs
-  - **Apache NiFi:** For data ingestion and integration
-- **Data Storage:**
-  - **Amazon S3:** For storing raw and processed data
-  - **Amazon Redshift:** For creating an analytics data warehouse
-  - **PostgreSQL:** For the relational database
+  - **AWS S3:** For storing raw and processed data
 - **Data Processing:**
-  - **Apache Spark:** For distributed data processing and transformation
-  - **AWS Glue:** For ETL (Extract, Transform, Load) operations
+  - **AWS Glue:** For ETL (Extract, Transform, Load) operations and data processing
+- **Data Storage and Querying:**
+  - **AWS Athena:** For querying the data stored in AWS S3
 - **Data Visualization:**
-  - **Tableau:** For creating interactive dashboards
-  - **Power BI:** For business intelligence and reporting
-- **Data Orchestration:**
-  - **Apache Airflow:** For workflow automation and scheduling
+  - **AWS QuickSight:** For creating interactive dashboards and reports
 
 **Justification for Tech Stack:**
-- **Apache Kafka and NiFi:** Efficient for handling large volumes of streaming data and integrating various data sources.
-- **Amazon S3 and Redshift:** Highly scalable and suitable for storing large datasets and performing complex queries.
-- **PostgreSQL:** Reliable and widely used relational database with robust support for complex queries.
-- **Apache Spark:** Capable of processing large datasets quickly and efficiently.
-- **Tableau and Power BI:** Leading tools for data visualization and business intelligence, offering rich features for creating insightful dashboards.
-- **Apache Airflow:** Ideal for managing and automating data workflows, ensuring seamless data processing and integration.
+- **AWS S3:** Highly scalable and suitable for storing large datasets in various formats.
+- **AWS Glue:** Simplifies the process of extracting, transforming, and loading data with a serverless architecture.
+- **AWS Athena:** Allows for easy querying of data directly from S3 using standard SQL, eliminating the need for complex ETL jobs.
+- **AWS QuickSight:** Provides robust features for creating insightful dashboards and visualizations, integrated seamlessly with AWS services.
 
 ## 5. Data Modeling
 
